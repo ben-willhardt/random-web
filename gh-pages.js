@@ -3,7 +3,7 @@ import { publish } from 'gh-pages';
 publish(
  'build', // path to public directory
  {
-  branch: 'Benne2000',
+  branch: 'gh-pages',
   repo: 'https://github.com/JARVIS-source/random-web.git', // Update to point to your repository
   user: {
    name: 'Benedict Willhardt', // update to use your name
