@@ -16,7 +16,7 @@
     };
 </script>
 
-<main class="pt-5 grid grid-cols-1 divide-y dark:divide-zinc-800 m-2">
+<main class="pt-5 grid grid-cols-1 divide-y dark:divide-zinc-800 m-2 max-h-screen">
     <div class="ml-2 mr-2 mb-2">
         <EntryField/>
     </div>
@@ -35,5 +35,4 @@
             R@ŊðØm
         </button>
     </div>
-
-</main>
+</main> 

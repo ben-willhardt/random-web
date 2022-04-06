@@ -1,17 +1,18 @@
 import { writable } from "svelte/store";
 import { browser } from "$app/env";
 
-export let options;
+export const options = writable([]);
 
-if (browser){
-    try {
-        options = writable( JSON.parse(localStorage.getItem("options")));
-    } catch {
-        options = writable([]);
-    }
+if (browser) {
+    options.update((options) => {
+        let cache = localStorage.getItem("options");
+        if (cache !== null && cache !== "null") {
+            console.log("recovered entries from localStorage")
+            return JSON.parse(cache);
+        }
+        return options;
+    });
     options.subscribe((options) => localStorage.setItem("options", JSON.stringify(options)));
-} else {
-    options = writable([]);
 }
 
 export const addOption = (text) => {
@@ -35,5 +36,5 @@ export const selectOption = (id) => {
         }
 
         return options;
-    })   
+    });
 }
