@@ -4,10 +4,10 @@ publish(
  'build', // path to public directory
  {
   branch: 'gh-pages',
-  repo: 'https://github.com/JARVIS-source/random-web.git', // Update to point to your repository
+  repo: 'https://github.com/Benne2000/random-web.git', // Update to point to your repository
   user: {
    name: 'Benedict Willhardt', // update to use your name
-   email: 'benedict@willhardt.dev' // Update to use your email
+   email: 'bennewill@web.de' // Update to use your email
   },
   dotfiles: true
   },

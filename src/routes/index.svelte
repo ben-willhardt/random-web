@@ -1,8 +1,12 @@
+<script context="module">
+    export const prerender = true;
+</script>
+
 <script>
     import {get} from "svelte/store";
-    import Option from "../components/Option.svelte";
-    import EntryField from "../components/EntryField.svelte";
-    import {options} from "../stores/optionStore";
+    import Option from "$lib/components/Option.svelte";
+    import EntryField from "$lib/components/EntryField.svelte";
+    import {options} from "$lib/stores/optionStore.js";
 
     let result = {
             text: "",

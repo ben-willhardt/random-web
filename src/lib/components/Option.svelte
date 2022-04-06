@@ -1,5 +1,5 @@
 <script>
-    import {deleteOption, selectOption} from "../stores/optionStore";
+    import {deleteOption, selectOption} from "$lib/stores/optionStore.js";
     export let option;
     export let showActions = true;
 </script>
