@@ -16,7 +16,7 @@
         </svg>
     </div>
     {/if}
-    <span class="flex-1 ml-3 { center ? 'text-center':''}">{#if option.text !== '' } {option.text} {:else} &nbsp; {/if} </span>
+    <span class="flex-1 ml-3 { center ? 'text-center':''} overflow-auto">{#if option.text !== '' } {option.text} {:else} &nbsp; {/if} </span>
     {#if showActions}
     <button id="delete-entry-content-toggle" type="button" on:click={() => {deleteOption(option.id), setTimeout(rotateIcon);}} class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-2.5">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

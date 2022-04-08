@@ -42,7 +42,7 @@
             <Option option={result} showActions={false} center={true}/>
         </div>
         <div>
-            <button type="button" on:click={() => {getRandom(); rotateIcon();}} class="w-full h-16 bg-violet-500  dark:bg-violet-700 text-zinc-100 dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-3xl p-2.5">
+            <button type="button" on:click={() => {getRandom(); rotateIcon();}} class="w-full h-16 bg-violet-600  dark:bg-violet-700 text-white dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-3xl p-2.5">
                 R@ŊðØm
             </button>
         </div>
