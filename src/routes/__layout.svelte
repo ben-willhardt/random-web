@@ -4,6 +4,6 @@
 </script>
 
 <Navbar/>
-<div class="container mx-auto max-w-xl">
+<main class="absolute top-0 left-0 w-full h-screen z-0">
     <slot/>
-</div>
+</main>
