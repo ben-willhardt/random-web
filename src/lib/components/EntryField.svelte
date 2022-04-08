@@ -1,7 +1,8 @@
 <script>
-    let option = '';
-
     import { addOption } from "$lib/stores/optionStore.js";
+    import {rotateIcon} from "$lib/ui-utils.js";
+
+    let option = '';
 
     const handleSubmit = () => {
         if (option !== '') {
@@ -9,6 +10,7 @@
             console.log("stored option:", option);
             option = '';
         }
+        setTimeout(rotateIcon);
     }
 </script>
 
@@ -21,7 +23,7 @@
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                   </svg>
             </button>
-            <button id="delete-entry-content-toggle" type="button" on:click={() => option = ''} class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-2.5">
+            <button id="delete-entry-content-toggle" type="button" on:click={() => {option = ''; setTimeout(rotateIcon);}} class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-2.5">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z" />
                   </svg>

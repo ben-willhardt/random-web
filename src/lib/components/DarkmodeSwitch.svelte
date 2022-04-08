@@ -1,8 +1,6 @@
 <script>
-
     import { onMount } from 'svelte';
-
-    export const ThemeChangeEvent = new Event('ThemeChange');
+    import {rotateIcon, ThemeChangeEvent} from "$lib/ui-utils.js";
 
     onMount(() => {
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -45,6 +43,7 @@
                     localStorage.setItem('color-theme', 'dark');
                 }
             }
+            setTimeout(rotateIcon);
         });
     });
 </script>

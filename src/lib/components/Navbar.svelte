@@ -25,8 +25,10 @@
       <div class="relative flex items-center justify-between h-14 pb-1.5">
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center w-12 ml-1">
-            <img id="light-icon" class="h-12 w-auto" src="{assets}/button-rand.png" alt="Random">
-            <img id="dark-icon" class="hidden h-12 w-auto" src="{assets}/silverbutton-rand.png" alt="Random">
+            <div id="random-icon" class="transition ease-in-out duration-300">
+              <img id="light-icon" class="h-12 w-auto" src="{assets}/button-rand.png" alt="Random">
+              <img id="dark-icon" class="hidden h-12 w-auto" src="{assets}/silverbutton-rand.png" alt="Random">
+            </div>
           </div>
           <div class="flex-1 flex items-center justify-center mr-10">
             <h1 class="text-2xl">

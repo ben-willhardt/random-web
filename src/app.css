@@ -13,3 +13,15 @@
 .h-\[calc\(100\%_\-_h-11_\-_m\-2_\-_h\-28\)\] {
     height: calc(100% - theme('height.11') - theme('margin.2') - theme('height.28'));
 }
+
+.rotate-360 {
+    --tw-rotate: 360deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
