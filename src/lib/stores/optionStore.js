@@ -38,3 +38,16 @@ export const selectOption = (id) => {
         return options;
     });
 }
+
+export const editOption = (id, newtext) => {
+    options.update(options => {
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].id === id) {
+                options[i].text = newtext;
+                break;
+            }
+        }
+
+        return options;
+    });
+}

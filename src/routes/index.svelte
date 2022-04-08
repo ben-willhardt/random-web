@@ -39,7 +39,7 @@
 <div class="absolute bottom-0 left-0 w-full h-28">
     <div class="container mx-auto max-w-xl pl-2 pr-2">
         <div class="transform-none">
-            <Option option={result} showActions={false} center={true}/>
+            <Option option={result} showActions={false} center={true} editEnabled={false}/>
         </div>
         <div>
             <button type="button" on:click={() => {getRandom(); rotateIcon();}} class="w-full h-16 bg-violet-600  dark:bg-violet-700 text-white dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-3xl p-2.5">
