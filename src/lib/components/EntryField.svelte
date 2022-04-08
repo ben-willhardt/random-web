@@ -14,7 +14,7 @@
 
 <form class="grid place-items-center" on:submit|preventDefault={handleSubmit}>
     <div class="w-full max-w-2xl flex">
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800" name="option_entry" id="option_entry" type="text" bind:value={option} placeholder="Trage hier deine Optionen ein...">
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="option_entry" type="text" bind:value={option} placeholder="Trage hier deine Optionen ein...">
         <div class="relative flex items-center justify-between mx-1">
             <button id="add-option-toggle" type="submit" class="mr-1 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-green-200 dark:focus:ring-green-700 rounded-lg text-sm p-2.5">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
