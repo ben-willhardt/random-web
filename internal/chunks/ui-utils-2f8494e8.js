@@ -1,0 +1,1 @@
+const e=new Event("ThemeChange"),s=()=>{const t=document.getElementById("random-icon");t.classList.add("rotate-360"),setTimeout(()=>{t.classList.add("notransition"),t.classList.remove("rotate-360"),t.offsetHeight,t.classList.remove("notransition")},301)};export{e as T,s as r};
