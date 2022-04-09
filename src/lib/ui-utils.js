@@ -1,5 +1,5 @@
 import { browser } from "$app/env";
-import { writable } from "svelte/store";
+import { get, writable } from "svelte/store";
 
 export const ThemeChangeEvent = new Event('ThemeChange');
 export let overlayContent = writable(null);
@@ -23,10 +23,24 @@ export const rotateIcon = () => {
     }, 301);
 }
 
+export function blurAll(){
+    var tmp = document.createElement("input");
+    tmp.style.position = "fixed";
+    document.getElementById('overlay-container').appendChild(tmp);
+    tmp.focus();
+    document.getElementById('overlay-container').removeChild(tmp);
+}
+
 export const showOverlay = () => {
     const overlay = document.getElementById('overlay');
     const overlay_bg = document.getElementById('overlay-bg');
     const overlay_container = document.getElementById('overlay-container');
+
+    // blurAll();
+    if (!get(overlayOpen)) {
+        document.getElementById('close-overlay-btn').focus()
+        document.getElementById('close-overlay-btn').blur();
+    }
 
     overlay_bg.classList.remove('hidden');
     overlay_bg.offsetHeight

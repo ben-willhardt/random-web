@@ -22,7 +22,7 @@
     </div>
     {/if}
     {#if editEnabled}
-    <input class="focus:shadow ml-3 appearance-none focus:border focus:rounded w-full py-2 pl-2 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="edit-option-{option.id}" type="text" bind:value={option.text} on:change={() => {editOption(option.identity, option.text)}}/>
+    <input class="focus:shadow ml-3 appearance-none focus:border focus:rounded w-full py-2 pl-2 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="edit-option-{option.id}" type="text" bind:value={option.text} on:change={() => {editOption(option.id, option.text)}}/>
     {:else}
     <span class="flex-1 { showActions ? 'ml-3':''} { center ? 'text-center':''} overflow-auto">{#if option.text !== '' } {option.text} {:else} &nbsp; {/if} </span>
     {/if}

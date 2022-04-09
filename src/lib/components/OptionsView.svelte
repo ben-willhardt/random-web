@@ -24,7 +24,9 @@
         hovering = null;
     }
 
-    const dragstart = (event, i) => {
+    const dragstart = (event, i, id) => {
+        
+        document.getElementById('edit-option-' + id).blur();
         event.dataTransfer.effectAllowed = 'move';
         event.dataTransfer.dropEffect = 'move';
         const start = i;
@@ -73,9 +75,9 @@
         {#each $options as option, optionIndex (option.id)}
             <div animate:flip="{{duration: 300}}"
                 draggable={true} 
-                on:dragstart={event => dragstart(event, optionIndex)}
+                on:dragstart={event => dragstart(event, optionIndex, option.id)}
                 on:drop|preventDefault={event => drop(event, optionIndex)}
-                ondragover={() => false}
+                ondragover="return false"
                 on:dragenter={() => hovering = optionIndex}
                 class:is-hovering={hovering === optionIndex}>
                 <Option option={option} optionIndex={optionIndex}/>

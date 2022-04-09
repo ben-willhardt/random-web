@@ -23,7 +23,7 @@
         </div>
     </div>
 </div>
-<div class="absolute bottom-0 sm-height:bottom-[-7rem] left-0 w-full h-16 mb-2">
+<div class="absolute bottom-0 sm-height:bottom-[-4.5rem] left-0 w-full h-16 mb-2">
     <div class="container mx-auto max-w-xl pl-2 pr-2">
         <!-- <div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1">
             <span class="flex-1 text-center overflow-auto">{#if result.text !== '' } {result.text} {:else} &nbsp; {/if}</span>
