@@ -2,7 +2,9 @@ module.exports = {
   // add this section
   content: [
     './src/**/*.html',
-    './src/**/*.svelte'
+    './src/**/*.svelte',
+    './src/**/*.js',
+    // './src/**/*.css'
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -15,10 +17,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  safelist: [
-    {
-      pattern: /opacity-50/
-    },
-  ],
+  // safelist: [
+  //   {
+  //     pattern: /opacity-50/
+  //   },
+  // ],
   plugins: [],
 }

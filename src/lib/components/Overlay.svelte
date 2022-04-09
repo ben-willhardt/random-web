@@ -1,12 +1,35 @@
 <script>
-    import {closeOverlay, overlayContent, rotateIcon} from '$lib/ui-utils';
-import ResultOrder from './ResultOrder.svelte';
-import ResultSelection from './ResultSelection.svelte';
-import Settings from './Settings.svelte';
+import { browser } from '$app/env';
+
+    import {closeOverlay, overlayContent, rotateIcon, showOverlay} from '$lib/ui-utils';
+    import ResultOrder from './ResultOrder.svelte';
+    import ResultSelection from './ResultSelection.svelte';
+    import Settings from './Settings.svelte';
+
+    let touchstartX = 0
+    let touchendX = 0
+
+    if (browser) {
+        const slider = document.getElementById('main');
+
+        function handleGesture() {
+            if (touchendX < touchstartX) closeOverlay();
+            if (touchendX > touchstartX) showOverlay();
+        }
+
+        slider.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+        })
+
+        slider.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleGesture();
+        })
+    }
 </script>
 
 <div id="overlay" class="transition-all ease-in-out duration-[500ms] absolute h-full w-full z-20 top-0 -left-full pointer-events-none">
-    <div id="overlay-container" class="w-full h-[calc(100%_-_theme('height.16'))] container mx-auto max-w-xl mt-16 bg-white dark:bg-zinc-900 p-2 pointer-events-auto">
+    <div id="overlay-container" class="w-full h-[calc(100%_-_4.5rem_-_theme('margin.2'))] container mx-auto max-w-xl mt-[4.5rem] mb-2 bg-white dark:bg-zinc-900 border rounded border-zinc-200 dark:border-zinc-700 p-2 pointer-events-auto">
         <div class="w-full h-full flex flex-col">
             <div class="flex-grow h-full">
                 {#if $overlayContent === null}
