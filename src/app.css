@@ -18,8 +18,8 @@
     height: calc(100% - theme('height.11') - theme('margin.2'));
 }
 
-.h-\[calc\(100\%_\-_h-11_\-_m\-2_\-_h\-28\)\] {
-    height: calc(100% - theme('height.11') - theme('margin.2') - theme('height.28'));
+.h-\[calc\(100\%_\-_h-11_\-_m\-2_\-_h\-16\)\] {
+    height: calc(100% - theme('height.11') - theme('margin.2') - theme('height.16'));
 }
 
 .rotate-360 {

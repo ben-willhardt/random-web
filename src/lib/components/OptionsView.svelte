@@ -47,7 +47,12 @@
     });
 </script>
 
-<div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight bg-white dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1">
+<div class="relative flex py-1 items-center">
+    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
+    <span class="flex-shrink mx-4 text-zinc-700 dark:text-zinc-400">Optionenliste</span>
+    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
+</div>
+<div class="flex items-center shadow-[0_5px_5px_-5px_rgba(0,0,0,0.3)] appearance-none rounded w-full pb-2 px-3 border-b leading-tight bg-white dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1">
     <div class="relative">
         <div class="grid grid-cols-1">
             <input id="select-all" class="form-tick appearance-none bg-white dark:bg-zinc-800 h-6 w-6 border border-gray-300 dark:border-gray-400 rounded-md checked:bg-violet-500 dark:checked:bg-violet-600 focus:border-violet-500 dark:focus:border-violet-600 checked:border-transparent dark:checked:border-transparent focus:outline-none" name="selected" type="checkbox" bind:checked={allSelected} on:change={() => { if (allSelected) {selectAllOption()} else {deselectAllOption()}}}/>
@@ -63,19 +68,14 @@
         </svg>
     </button>
 </div>
-<div class="relative flex py-1 items-center">
-    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
-    <span class="flex-shrink mx-4 text-zinc-700 dark:text-zinc-400">Optionenliste</span>
-    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
-</div>
 <div class="overflow-auto">
     <ul class="w-full">
         {#each $options as option, optionIndex (option.id)}
-            <div animate:flip
+            <div animate:flip="{{duration: 300}}"
                 draggable={true} 
                 on:dragstart={event => dragstart(event, optionIndex)}
                 on:drop|preventDefault={event => drop(event, optionIndex)}
-                ondragover="return false"
+                ondragover={() => false}
                 on:dragenter={() => hovering = optionIndex}
                 class:is-hovering={hovering === optionIndex}>
                 <Option option={option} optionIndex={optionIndex}/>
