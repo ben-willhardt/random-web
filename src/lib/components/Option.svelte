@@ -3,23 +3,10 @@
     import {rotateIcon} from "$lib/ui-utils.js";
 
     export let option;
-    export let optionIndex = null;
-    export let showDropPreview = false;
-    export let enableDropPreview = true;
+    export const optionIndex = null;
     export let showActions = true;
     export let editEnabled = true;
     export let center = false;
-
-    let hoveringOverOption;
-
-    let dropPreviewOption = {
-            text: "",
-            selected: false,
-            id: 0
-        };
-
-    export let dragStart = (event, optionIndex) => {};
-    export let drop = (event, optionIndex) => {};
 </script>
 
 
