@@ -24,4 +24,8 @@
     -moz-transition: none !important;
     -o-transition: none !important;
     transition: none !important;
-  }
+}
+
+.is-hovering > li {
+    @apply border-violet-600 !important;
+}

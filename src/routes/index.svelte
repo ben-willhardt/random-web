@@ -4,15 +4,15 @@
 
 <script>
     import {get} from "svelte/store";
-    import Option from "$lib/components/Option.svelte";
     import EntryField from "$lib/components/EntryField.svelte";
     import {options} from "$lib/stores/optionStore.js";
     import {rotateIcon} from "$lib/ui-utils.js";
+    import OptionsView from "$lib/components/OptionsView.svelte";
 
     let result = {
             text: "",
             selected: false,
-            id: 2497433927
+            id: 0
         };
 
     const getRandom = () => {
@@ -28,18 +28,14 @@
         </div>
 
         <div class="flex flex-col h-[calc(100%_-_h-11_-_m-2_-_h-28)] w-full items-stretch p-2 pt-4 overflow-auto">
-            <ul class="w-full">
-                {#each $options as option}
-                    <Option option={option}/>
-                {/each}
-            </ul>
+            <OptionsView/>
         </div>
     </div>
 </div>
 <div class="absolute bottom-0 left-0 w-full h-28">
     <div class="container mx-auto max-w-xl pl-2 pr-2">
-        <div class="transform-none">
-            <Option option={result} showActions={false} center={true} editEnabled={false}/>
+        <div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1">
+            <span class="flex-1 text-center overflow-auto">{#if result.text !== '' } {result.text} {:else} &nbsp; {/if}</span>
         </div>
         <div>
             <button type="button" on:click={() => {getRandom(); rotateIcon();}} class="w-full h-16 bg-violet-600  dark:bg-violet-700 text-white dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-3xl p-2.5">

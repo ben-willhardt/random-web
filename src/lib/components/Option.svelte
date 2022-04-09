@@ -1,21 +1,37 @@
 <script>
     import {deleteOption, selectOption, editOption} from "$lib/stores/optionStore.js";
     import {rotateIcon} from "$lib/ui-utils.js";
-import { identity } from "svelte/internal";
 
     export let option;
+    export let optionIndex = null;
+    export let showDropPreview = false;
+    export let enableDropPreview = true;
     export let showActions = true;
     export let editEnabled = true;
     export let center = false;
+
+    let hoveringOverOption;
+
+    let dropPreviewOption = {
+            text: "",
+            selected: false,
+            id: 0
+        };
+
+    export let dragStart = (event, optionIndex) => {};
+    export let drop = (event, optionIndex) => {};
 </script>
+
 
 <li class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1">
     {#if showActions}
-    <div class="grid grid-cols-1">
-        <input id="select_{option.id}" class="form-tick appearance-none bg-white dark:bg-zinc-800 h-6 w-6 border border-gray-300 dark:border-gray-400 rounded-md checked:bg-violet-500 dark:checked:bg-violet-600 focus:border-violet-500 dark:focus:border-violet-600 checked:border-transparent dark:checked:border-transparent focus:outline-none" name="selected" type="checkbox" checked={option.selected} on:change={() => selectOption(option.id)}/>
-        <svg id="tick_{option.id}" xmlns="http://www.w3.org/2000/svg" class="text-white dark:text-zinc-100 h-6 w-6 absolute top-0 left-0 pointer-events-none {option.selected === true ? '' : 'hidden'}" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
+    <div class="relative">
+        <div class="grid grid-cols-1">
+            <input id="select_{option.id}" class="form-tick appearance-none bg-white dark:bg-zinc-800 h-6 w-6 border border-gray-300 dark:border-gray-400 rounded-md checked:bg-violet-500 dark:checked:bg-violet-600 focus:border-violet-500 dark:focus:border-violet-600 checked:border-transparent dark:checked:border-transparent focus:outline-none" name="selected" type="checkbox" checked={option.selected} on:change={() => selectOption(option.id)}/>
+            <svg id="tick_{option.id}" xmlns="http://www.w3.org/2000/svg" class="text-white dark:text-zinc-100 h-6 w-6 absolute top-0 left-0 pointer-events-none {option.selected === true ? '' : 'hidden'}" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+        </div>
     </div>
     {/if}
     {#if editEnabled}
