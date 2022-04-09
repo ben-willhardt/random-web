@@ -26,6 +26,10 @@ export const deleteOption = (id) => {
     options.update(options => options.filter(option => option.id !== id));
 }
 
+export const deleteSelectedOption = () => {
+    options.update(options => options.filter(option => !option.selected));
+}
+
 export const selectOption = (id) => {
     options.update(options => {
         for (let i = 0; i < options.length; i++) {
@@ -33,6 +37,26 @@ export const selectOption = (id) => {
                 options[i].selected = !options[i].selected;
                 break;
             }
+        }
+
+        return options;
+    });
+}
+
+export const selectAllOption = () => {
+    options.update(options => {
+        for (let i = 0; i < options.length; i++) {
+            options[i].selected = true;
+        }
+
+        return options;
+    });
+}
+
+export const deselectAllOption = () => {
+    options.update(options => {
+        for (let i = 0; i < options.length; i++) {
+            options[i].selected = false;
         }
 
         return options;

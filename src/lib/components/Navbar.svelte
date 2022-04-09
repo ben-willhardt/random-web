@@ -20,7 +20,7 @@
     });
 </script>
 
-<nav class="absolute top-0 left-0 pt-2 h-16 w-full transition duration-300 bg-white dark:bg-zinc-900 shadow-md z-40">
+<nav class="absolute top-0 left-0 pt-2 h-16 w-full min-w-[267px] transition duration-300 bg-white dark:bg-zinc-900 shadow-md z-40">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-14 pb-1.5">
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">

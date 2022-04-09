@@ -11,3 +11,7 @@ export const rotateIcon = () => {
         icon.classList.remove('notransition');
     }, 301);
 }
+
+export const showOverlay = () => {
+    
+}

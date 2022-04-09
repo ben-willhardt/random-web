@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'sm-height': {'raw': '(max-height: 500px)'}
+      }
+    },
   },
   variants: {
     extend: {},
