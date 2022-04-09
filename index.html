@@ -17,14 +17,14 @@
 			console.log("Theme:", localStorage.getItem('color-theme'))
         </script>
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/random-web/internal/assets/pages/__layout.svelte-cba2117c.css">
-	<link rel="modulepreload" href="/random-web/internal/start-f3e85034.js">
+	<link rel="stylesheet" href="/random-web/internal/assets/pages/__layout.svelte-6d05eeca.css">
+	<link rel="modulepreload" href="/random-web/internal/start-f3b70962.js">
 	<link rel="modulepreload" href="/random-web/internal/chunks/index-a8ef7c51.js">
 	<link rel="modulepreload" href="/random-web/internal/chunks/index-73fd5bd0.js">
 	<link rel="modulepreload" href="/random-web/internal/chunks/paths-c0fc83a9.js">
-	<link rel="modulepreload" href="/random-web/internal/pages/__layout.svelte-6cfd2515.js">
-	<link rel="modulepreload" href="/random-web/internal/chunks/ui-utils-2f8494e8.js">
-	<link rel="modulepreload" href="/random-web/internal/pages/index.svelte-b5449f25.js">
+	<link rel="modulepreload" href="/random-web/internal/pages/__layout.svelte-a77dd494.js">
+	<link rel="modulepreload" href="/random-web/internal/chunks/ui-utils-a09925e1.js">
+	<link rel="modulepreload" href="/random-web/internal/pages/index.svelte-ead3a1fd.js">
 	</head>
 
 	<body class="transition duration-300 dark:bg-zinc-900 dark:text-zinc-100 min-w-[267px]">
@@ -37,29 +37,30 @@
             </h1></div></div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"><button id="theme-toggle" type="button" class="text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-4 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-sm p-2.5"><svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></button></div></div></div></nav>
-<main class="absolute top-0 left-0 w-full h-full min-w-[267px] z-0"><div class="absolute h-full w-full z-10 transition ease-in-out duration-150 bg-black opacity-50 hidden"></div>
-<div class="transition ease-in-out duration-300 absolute h-full w-full z-20 top-0 left-[-100%]"><div id="overlay-window" class="w-full h-[calc(100%_-_h-16_-_m-2)] container mx-auto max-w-xl mt-16 bg-white"><div class="text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></div></div></div>
+<main class="absolute top-0 left-0 w-full h-full min-w-[267px] z-0"><div id="overlay" class="transition-all ease-in-out duration-[500ms] absolute h-full w-full z-20 top-0 -left-full pointer-events-none"><div id="overlay-container" class="w-full h-[calc(100%_-_theme('height.16'))] container mx-auto max-w-xl mt-16 bg-white dark:bg-zinc-900 p-2 pointer-events-auto"><div class="w-full h-full flex flex-col"><div class="flex-grow h-full"><span>Error: No content specified</span></div>
+            <button type="button" class="flex-grow-0 w-full h-16 justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-sm p-2.5"><div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg></div></button></div></div></div>
+<div id="overlay-bg" class="absolute top-0 left-0 h-full w-full z-10 transition-all ease-in-out duration-500 bg-black opacity-0 hidden"></div>
 <div class="container h-[calc(100%_-_h-14_-_m-2)] mx-auto max-w-xl mt-14"><div class="pt-5 m-2 h-full"><div class="ml-2 mr-2 mb-1 h-11"><form class="grid place-items-center"><div class="w-full max-w-2xl flex"><input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="option_entry" type="text" placeholder="Trage hier deine Optionen ein..." value="">
         <div class="relative flex items-center justify-between mx-1"><button id="add-option-toggle" type="submit" class="mr-1 text-green-700 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-green-200 dark:focus:ring-green-700 rounded-lg text-sm p-2.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></button>
             <button id="delete-entry-content-toggle" type="button" class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-2.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z"></path></svg></button></div></div></form></div>
-        <div class="flex flex-col h-[calc(100%_-_h-11_-_m-2_-_h-28)] sm-height:h-[calc(100%_-_theme('height.11')_-_theme('margin.2'))] w-full items-stretch p-2"><div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight bg-white dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1"><div class="relative"><div class="grid grid-cols-1"><input id="select-all" class="form-tick appearance-none bg-white dark:bg-zinc-800 h-6 w-6 border border-gray-300 dark:border-gray-400 rounded-md checked:bg-violet-500 dark:checked:bg-violet-600 focus:border-violet-500 dark:focus:border-violet-600 checked:border-transparent dark:checked:border-transparent focus:outline-none" name="selected" type="checkbox">
+        <div class="flex flex-col h-[calc(100%_-_h-11_-_m-2_-_h-16)] sm-height:h-[calc(100%_-_theme('height.11'))] w-full items-stretch p-2"><div class="relative flex py-1 items-center"><div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
+    <span class="flex-shrink mx-4 text-zinc-700 dark:text-zinc-400">Optionenliste</span>
+    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div></div>
+<div class="flex items-center shadow-[0_5px_5px_-5px_rgba(0,0,0,0.3)] appearance-none rounded w-full pb-2 px-3 border-b leading-tight bg-white dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1"><div class="relative"><div class="grid grid-cols-1"><input id="select-all" class="form-tick appearance-none bg-white dark:bg-zinc-800 h-6 w-6 border border-gray-300 dark:border-gray-400 rounded-md checked:bg-violet-500 dark:checked:bg-violet-600 focus:border-violet-500 dark:focus:border-violet-600 checked:border-transparent dark:checked:border-transparent focus:outline-none" name="selected" type="checkbox">
             <svg id="tick-all" xmlns="http://www.w3.org/2000/svg" class="text-white dark:text-zinc-100 h-6 w-6 absolute top-0 left-0 pointer-events-none hidden" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></div></div>
     <label for="select-all" class="w-full ml-5">alle auswählen</label>
     <button id="delete-option-all" type="button" class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-1 mr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg></button></div>
-<div class="relative flex py-1 items-center"><div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div>
-    <span class="flex-shrink mx-4 text-zinc-700 dark:text-zinc-400">Optionenliste</span>
-    <div class="flex-grow border-t border-zinc-700 dark:border-zinc-400"></div></div>
 <div class="overflow-auto"><ul class="w-full"></ul></div></div></div></div>
-<div class="absolute bottom-0 sm-height:bottom-[-7rem] left-0 w-full h-28"><div class="container mx-auto max-w-xl pl-2 pr-2"><div class="flex items-center shadow appearance-none border rounded w-full py-2 px-3 leading-tight dark:bg-zinc-900 dark:border-zinc-500 focus:dark:bg-zinc-800 mb-1"><span class="flex-1 text-center overflow-auto">   </span></div>
+<div class="absolute bottom-0 sm-height:bottom-[-7rem] left-0 w-full h-16 mb-2"><div class="container mx-auto max-w-xl pl-2 pr-2">
         <div class="flex flex-row"><button type="button" class="flex-grow-0 w-full h-16 bg-violet-600 dark:bg-violet-700 text-white dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-3xl p-2.5">R@ŊðØm
             </button>
             <button type="button" class="flex-none ml-2 w-16 h-16 text-zinc-500 dark:text-zinc-400 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-sm p-2.5 pl-5"><div class="grid grid-col-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div></button></div></div></div></main>
 
 
-		<script type="module" data-hydrate="1arahad">
-		import { start } from "/random-web/internal/start-f3e85034.js";
+		<script type="module" data-hydrate="jvvlz5">
+		import { start } from "/random-web/internal/start-f3b70962.js";
 		start({
-			target: document.querySelector('[data-hydrate="1arahad"]').parentNode,
+			target: document.querySelector('[data-hydrate="jvvlz5"]').parentNode,
 			paths: {"base":"/random-web","assets":"/random-web"},
 			session: {},
 			route: true,
@@ -69,8 +70,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/random-web/internal/pages/__layout.svelte-6cfd2515.js"),
-						import("/random-web/internal/pages/index.svelte-b5449f25.js")
+					import("/random-web/internal/pages/__layout.svelte-a77dd494.js"),
+						import("/random-web/internal/pages/index.svelte-ead3a1fd.js")
 				],
 				params: {},
 				routeId: ""
