@@ -43,7 +43,7 @@
 </script>
 
 <div id="overlay" class="transition-all ease-in-out duration-[500ms] absolute h-full w-full z-20 top-0 -left-full pointer-events-none">
-    <div id="overlay-container" class="w-full h-[calc(100%_-_4.5rem_-_theme('margin.2'))] container mx-auto max-w-xl mt-[4.5rem] mb-2 bg-white dark:bg-zinc-900 border rounded border-zinc-200 dark:border-zinc-700 p-2 pointer-events-auto">
+    <div id="overlay-container" class="w-full h-[calc(100%_-_4.5rem_-_theme('margin.2'))] container mx-auto max-w-xl mt-[4.5rem] mb-2 bg-white dark:bg-zinc-900 border rounded border-zinc-200 dark:border-zinc-700 p-2 pointer-events-auto overflow-auto">
         <div class="w-full h-full flex flex-col">
             <div class="flex-grow h-full">
                 {#if $overlayContent === null}
@@ -62,6 +62,9 @@
                 <span>Error: specified content not found</span>
                 {/if}
             </div>
+            <!-- <button id="close-overlay-btn" type="button" on:click={() => {rotateIcon(); closeOverlay();}} class="flex-grow-0 w-full h-16 mb-2 justify-center bg-violet-600  dark:bg-violet-700 text-white dark:text-zinc-100 hover:bg-violet-600 dark:hover:bg-violet-800 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-2xl p-2.5">
+                Reihenfolge
+            </button> -->
             <button id="close-overlay-btn" type="button" on:click={() => {rotateIcon(); closeOverlay();}} class="flex-grow-0 w-full h-16 justify-center text-zinc-500 dark:text-zinc-400 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-sm p-2.5">
                 <div class="flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
