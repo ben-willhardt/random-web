@@ -1,10 +1,10 @@
 <script>
     import { onMount } from 'svelte';
-    import {rotateIcon, ThemeChangeEvent} from "$lib/ui-utils.js";
+    import {rotateIcon, ThemeChangeEvent} from "$lib/ui-utils";
 
     onMount(() => {
-        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
         // Change the icons inside the button based on previous settings
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -13,7 +13,7 @@
             themeToggleDarkIcon.classList.remove('hidden');
         }
 
-        var themeToggleBtn = document.getElementById('theme-toggle');
+        let themeToggleBtn = document.getElementById('theme-toggle');
 
         themeToggleBtn.addEventListener('click', function() {
 

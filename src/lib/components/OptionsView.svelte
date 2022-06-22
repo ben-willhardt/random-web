@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
     import Option from "$lib/components/Option.svelte";
-    import {deleteSelectedOption, deselectAllOption, options, selectAllOption} from "$lib/stores/optionStore.js";
+    import {deleteSelectedOption, deselectAllOption, options, selectAllOption} from "$lib/stores/optionStore";
     
     import {flip} from 'svelte/animate';
 
-    let hovering = null;
-    let allSelected = false;
+    let hovering: number = -1;
+    let allSelected: boolean = false;
 
     const drop = (event, target) => {
         event.dataTransfer.dropEffect = 'move'; 
@@ -21,7 +21,7 @@
             return options;
         });
 
-        hovering = null;
+        hovering = -1;
     }
 
     const dragstart = (event, i, id) => {

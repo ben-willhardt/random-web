@@ -33,7 +33,7 @@ function shuffle(array) {
 export const getRandomOrder = () => {
     let opts = get(options);
     
-    result_order.update(() => shuffle(opts));
+    result_order.update(() => shuffle([...opts]));
 };
 
 export const getBothResults = () => {

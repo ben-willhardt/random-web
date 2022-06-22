@@ -1,6 +1,6 @@
 <script>
-    import { addOption } from "$lib/stores/optionStore.js";
-    import {rotateIcon} from "$lib/ui-utils.js";
+    import { addOption } from "$lib/stores/optionStore";
+    import {rotateIcon} from "$lib/ui-utils";
 
     let option = '';
 

@@ -1,6 +1,6 @@
 <script>
-    import {deleteOption, selectOption, editOption} from "$lib/stores/optionStore.js";
-    import {rotateIcon} from "$lib/ui-utils.js";
+    import {deleteOption, selectOption, editOption} from "$lib/stores/optionStore";
+    import {rotateIcon} from "$lib/ui-utils";
 
     export let option;
     export const optionIndex = null;
