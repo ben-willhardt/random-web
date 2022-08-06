@@ -1,5 +1,6 @@
 <script lang="ts">
     import Option from "$lib/components/Option.svelte";
+    import OptionAdd from "./OptionAdd.svelte";
     import {deleteSelectedOption, deselectAllOption, options, selectAllOption} from "$lib/stores/optionStore";
     
     import {flip} from 'svelte/animate';
@@ -83,5 +84,8 @@
                 <Option option={option} optionIndex={optionIndex}/>
             </div>
         {/each}
+        <div>
+            <OptionAdd/>
+        </div>
     </ul>
 </div>

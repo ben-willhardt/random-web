@@ -42,8 +42,8 @@
     });
 </script>
 
-<div id="overlay" class="transition-all ease-in-out duration-[500ms] absolute h-full w-full z-20 top-0 -left-full pointer-events-none">
-    <div id="overlay-container" class="w-full h-[calc(100%_-_4.5rem_-_theme('margin.2'))] container mx-auto max-w-xl mt-[4.5rem] mb-2 bg-white dark:bg-zinc-900 border rounded border-zinc-200 dark:border-zinc-700 p-2 pointer-events-auto overflow-auto">
+<div id="overlay" class="transition-all ease-in-out duration-[500ms] absolute h-full max-h-[80%] w-full z-20 top-0 -left-full pointer-events-none">
+    <div id="overlay-container" class="w-full h-[calc(100%_-_4.5rem_-_theme('margin.2'))] max-h-[80%] container mx-auto max-w-xl mt-[4.5rem] mb-2 bg-white dark:bg-zinc-900 border rounded border-zinc-200 dark:border-zinc-700 p-2 pointer-events-auto overflow-auto">
         <div class="w-full h-full flex flex-col">
             <div class="flex-grow h-full">
                 {#if $overlayContent === null}

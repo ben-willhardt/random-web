@@ -4,11 +4,21 @@
 
 .h-\[calc\(100\%_\-_h\-16_\-_m\-2\)\] {
     height: calc(100% - theme('height.16') - theme('margin.2'));
-  }
+}
 
-  .h-\[calc\(100\%_\-_h\-14_\-_m\-2\)\] {
+.h-\[calc\(100\%_\-_h\-14_\-_m\-2\)\] {
     height: calc(100% - theme('height.14') - theme('margin.2'));
-  }
+}
+
+@media (max-height: 500px) {
+.sm\-height\:h-\[calc\(100\%_\-_h\-11\)\] {
+    height: calc(100% - theme('height.11'));
+}
+
+.sm\-height\:h-\[calc\(100\%_\-_h\-11_\-_m\-2\)\] {
+    height: calc(100% - theme('height.11') - theme('margin.2'));
+}
+}
 
 .h-\[calc\(100\%_\-_h\-11_\-_m\-2\)\] {
     height: calc(100% - theme('height.11') - theme('margin.2'));

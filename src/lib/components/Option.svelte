@@ -22,9 +22,9 @@
     </div>
     {/if}
     {#if editEnabled}
-    <input class="focus:shadow ml-3 appearance-none focus:border focus:rounded w-full py-2 pl-2 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="edit-option-{option.id}" type="text" bind:value={option.text} on:change={() => {editOption(option.id, option.text)}}/>
+    <input class="focus:shadow ml-3 appearance-none focus:border focus:rounded w-full h-10 py-2 pl-2 leading-tight focus:outline-none focus:shadow-outline dark:bg-zinc-900 dark:border-zinc-400 focus:dark:bg-zinc-800 focus:border-violet-500 dark:focus:border-violet-600" name="option_entry" id="edit-option-{option.id}" type="text" autocomplete="off" bind:value={option.text} on:change={() => {editOption(option.id, option.text)}}/>
     {:else}
-    <span class="flex-1 { showActions ? 'ml-3':''} { center ? 'text-center':''} overflow-auto">{#if option.text !== '' } {option.text} {:else} &nbsp; {/if} </span>
+    <span class="flex-1 h-10 { showActions ? 'ml-3':''} { center ? 'text-center':''} overflow-auto">{#if option.text !== '' } {option.text} {:else} &nbsp; {/if} </span>
     {/if}
     {#if showActions}
     <button id="delete-option-{option.id}" type="button" on:click={() => {deleteOption(option.id), setTimeout(rotateIcon);}} class="text-red-600 dark:text-red-500 hover:bg-red-200 hover:text-red-700 dark:hover:bg-red-700 dark:hover:text-zinc-800 focus:outline-none focus:ring-2 focus:ring-red-300 dark:focus:ring-red-700 rounded-lg text-sm p-2">

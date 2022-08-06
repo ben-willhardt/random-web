@@ -13,12 +13,12 @@
 </script>
 
 <Overlay/>
-<div class="container h-[calc(100%_-_h-14_-_m-2)] mx-auto max-w-xl mt-14">
-    <div class="pt-5 m-2 h-full">
-        <div class="ml-2 mr-2 mb-1 h-11">
+<div class="container h-[calc(100%_-_h-14_-_m-2)] sm-height:h-[calc(100%_-_h-11)] mx-auto max-w-xl mt-14">
+    <div class="pt-2 m-2 h-full">
+        <!-- <div class="ml-2 mr-2 mb-1 h-11">
             <EntryField/>
-        </div>
-        <div class="flex flex-col h-[calc(100%_-_h-11_-_m-2_-_h-16)] sm-height:h-[calc(100%_-_theme('height.11'))] w-full items-stretch p-2">
+        </div> -->
+        <div class="flex flex-col h-[calc(100%_-_h-11_-_m-2)] sm-height:h-full w-full items-stretch p-2 pb-4">
             <OptionsView/>
         </div>
     </div>
