@@ -32,6 +32,10 @@
     height: calc(100% - theme('height.11') - theme('margin.2') - theme('height.16'));
 }
 
+.h-full-without-header {
+    height: calc(100% - theme('height.16') - 2 * theme('padding.2'));
+}
+
 .rotate-360 {
     --tw-rotate: 360deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

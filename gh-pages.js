@@ -7,7 +7,7 @@ publish(
   repo: 'https://github.com/Benne2000/random-web.git', // Update to point to your repository
   user: {
    name: 'Benedict Willhardt', // update to use your name
-   email: 'bennewill@web.de' // Update to use your email
+   email: 'benedict@willhardt.dev' // Update to use your email
   },
   dotfiles: true
   },
